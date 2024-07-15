@@ -4,12 +4,20 @@ test("calculator object exists", () => {
   expect(calculator).toBeDefined();
 });
 
-test("calculator has add, subtract, divide, multiply methods", () => {
-  const methodNames = ["add", "subtract", "divide", "multiply"];
+test("calculator has add method", () => {
+  expect(typeof calculator.add).toBe("function");
+});
 
-  methodNames.forEach((methodName) => {
-    expect(typeof calculator[methodName]).toBe("function");
-  });
+test("calculator has subtract method", () => {
+  expect(typeof calculator.subtract).toBe("function");
+});
+
+test("calculator has divide method", () => {
+  expect(typeof calculator.divide).toBe("function");
+});
+
+test("calculator has multiply method", () => {
+  expect(typeof calculator.multiply).toBe("function");
 });
 
 test("add adds two numbers", () => {

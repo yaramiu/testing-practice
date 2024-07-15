@@ -4,13 +4,24 @@ test("function exists", () => {
   expect(analyzeArray).toBeDefined();
 });
 
-test("function returns object with average, min, max, and length properties", () => {
-  const propertyNames = ["average", "min", "max", "length"];
+test("function returns object with average field", () => {
   const object = analyzeArray([]);
+  expect(typeof object.average).toBe("number");
+});
 
-  propertyNames.forEach((propertyName) => {
-    expect(typeof object[propertyName]).toBe("number");
-  });
+test("function returns object with min field", () => {
+  const object = analyzeArray([]);
+  expect(typeof object.min).toBe("number");
+});
+
+test("function returns object with max field", () => {
+  const object = analyzeArray([]);
+  expect(typeof object.max).toBe("number");
+});
+
+test("function returns object with length field", () => {
+  const object = analyzeArray([]);
+  expect(typeof object.length).toBe("number");
 });
 
 test("returns correct average", () => {
